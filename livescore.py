@@ -4,7 +4,7 @@ url="http://synd.cricbuzz.com/j2me/1.0/livematches.xml"
 page=urllib2.urlopen(url)
 data=page.read()
 match=data.split('<match')
-batstart=match[2].split('<btTm')
+batstart=match[1].split('<btTm')
 batinn=batstart[1].split('</btTm>')
 inn=batinn[0].split("/>")
 sname=inn[0].split("sName=\"")[1]
